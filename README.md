@@ -92,15 +92,6 @@ Collections are stored as JSON files in your `collections` folder:
  ┗ 📄 .env
 ```
 
-## Command Palette
-
-Access these commands through the Command Palette (Ctrl+Shift+P / Cmd+Shift+P):
-
-- `Golden Retriever: Refresh Collections`
-- `Golden Retriever: Add Collection`
-- `Golden Retriever: New Request`
-- `Golden Retriever: Run All Collections`
-
 ## FAQ
 
 **Q: Where are my collections stored?**  
