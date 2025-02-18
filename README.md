@@ -1,8 +1,6 @@
 # Golden Retriever
 
-<!-- add it later, when icon is vsible -->
-
-![Golden Retriever](resources/icon.png)
+<img src="resources/icon.png" width="128" height="128" alt="Golden Retriever">
 
 A Visual Studio Code extension that brings API collection management right into your editor. Think Postman, but with Git sync and workspace integration.
 
