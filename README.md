@@ -95,6 +95,10 @@ Collections are stored as JSON files in your `collections` folder:
  ┗ 📄 .env
 ```
 
+## Example
+
+You can open this [server example](https://github.com/Andriiklymiuk/golden-example) with collections folder to see how easy it is to use Golden with any repo of your choice.
+
 ## FAQ
 
 **Q: Where are my collections stored?**  
