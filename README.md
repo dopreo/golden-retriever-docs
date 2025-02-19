@@ -122,7 +122,7 @@ A: Currently, this feature is not supported. However, you can use environment va
 **Q: How do I change the collections folder location?**  
 A: You can configure the collections path in VSCode settings:
 
-1. Open Settings (Ctrl+,)
+1. Open vscode Settings
 2. Search for "Golden Retriever"
 3. Update the "Collections Path" setting
 
