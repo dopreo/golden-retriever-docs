@@ -18,6 +18,7 @@ A Visual Studio Code extension that brings API collection management right into 
 🚀 **Request Management**
 
 - Create, edit, and organize API requests
+- Support for REST and GraphQL APIs
 - Support for all HTTP methods (GET, POST, PUT, PATCH, DELETE)
 - Folder organization for better request management
 - Environment variable support through `.env` files
@@ -26,7 +27,8 @@ A Visual Studio Code extension that brings API collection management right into 
 
 - Query parameter builder
 - Header management with bulk edit support
-- Request body editor
+- Request body editor with REST and GraphQL support
+- GraphQL query and variables editor
 - Test script support
 - cURL command generation
 
@@ -68,6 +70,45 @@ A Visual Studio Code extension that brings API collection management right into 
    - Click "Send" to execute
    - View responses in the integrated response viewer
 
+## Working with GraphQL
+
+Golden Retriever provides dedicated support for GraphQL APIs:
+
+1. Create a new request and select "GraphQL" from the body type dropdown
+2. Use the specialized GraphQL editor with:
+   - Query editor for your GraphQL operations
+   - Variables editor for JSON variables
+   - Automatic Content-Type header management
+
+Example GraphQL query:
+
+```graphql
+query GetUser($id: ID!) {
+  user(id: $id) {
+    id
+    name
+    email
+    posts {
+      title
+    }
+  }
+}
+```
+
+With variables:
+
+```json
+{
+  "id": "123"
+}
+```
+
+The extension will automatically:
+
+- Set the method to POST
+- Set the correct Content-Type header
+- Format the request body according to GraphQL specifications
+
 ## Environment Variables
 
 Golden Retriever supports environment variables through `.env` files:
@@ -79,8 +120,13 @@ Golden Retriever supports environment variables through `.env` files:
    BASE_URL=https://api.example.com
    ```
 3. Use variables in requests with `{{VARIABLE_NAME}}` syntax:
+
    ```
+   ## api request
    {{BASE_URL}}/users?key={{API_KEY}}
+
+   ## graphql
+   {{BASE_URL}}/graphql
    ```
 
 ## Collection Structure
@@ -92,6 +138,8 @@ Collections are stored as JSON files in your `collections` folder:
  ┣ 📁 collections
  ┃ ┣ 📄 users-api.json
  ┃ ┗ 📄 products-api.json
+ ┃ ┣ 📄 rest-api.json
+ ┃ ┗ 📄 graphql-api.json
  ┗ 📄 .env
 ```
 
@@ -107,8 +155,14 @@ A: Collections are stored as JSON files in the `collections` folder of your work
 **Q: Can I import Postman collections?**  
 A: Yes! Golden Retriever uses Postman/Newman compatible collection format. Just copy your Postman collection JSON into a file in your `collections` folder.
 
-**Q: How do I share collections with my team?**  
-A: Since collections are stored in your project repository, just commit and push the `collections` folder. Your team can pull the changes and immediately use them.
+**Q: Does it support both REST and GraphQL APIs?**  
+A: Yes! The extension provides dedicated support for both REST and GraphQL APIs, with specialized editors for each type.
+
+**Q: How do I switch between REST and GraphQL modes?**  
+A: In the request editor, use the body type dropdown to switch between "Raw" (for REST) and "GraphQL" modes.
+
+**Q: Can I use environment variables in GraphQL queries?**  
+A: Yes! You can use environment variables in both the GraphQL URL and variables using the `{{VARIABLE_NAME}}` syntax.
 
 **Q: Are my environment variables secure?**  
 A: Environment variables are stored in your local `.env` file, which should be added to `.gitignore` to keep sensitive data secure. The extension supports masking sensitive data in the UI.
