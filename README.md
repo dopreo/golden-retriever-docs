@@ -4,6 +4,9 @@
 
 A Visual Studio Code extension that brings API collection management right into your editor. Think Postman, but with Git sync and workspace integration.
 
+<!-- add here gif -->
+<img src="resources/demo.gif" width="600" alt="Golden Retriever Demo">
+
 ## Features
 
 🔄 **Git-Synced Collections**
