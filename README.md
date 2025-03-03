@@ -6,7 +6,6 @@ A Visual Studio Code extension that brings API collection management right into 
 
 https://marketplace.visualstudio.com/items?itemName=andriiklymiuk.golden-retriever
 
-<!-- add here gif -->
 <img src="resources/demo.gif" width="600" alt="Golden Retriever Demo">
 
 ## Features
@@ -39,6 +38,8 @@ https://marketplace.visualstudio.com/items?itemName=andriiklymiuk.golden-retriev
 - Write and run tests for your API requests
 - Run individual collections or all collections at once
 - View detailed test results and response data
+
+<img src="resources/demo-request.gif" width="600" alt="Golden Retriever Demo">
 
 ## Installation
 
