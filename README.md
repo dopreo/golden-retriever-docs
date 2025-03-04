@@ -179,7 +179,7 @@ A: Yes! You can use environment variables in both the GraphQL URL and variables 
 A: Environment variables are stored in your local `.env` file, which should be added to `.gitignore` to keep sensitive data secure. The extension supports masking sensitive data in the UI.
 
 **Q: Can I run multiple requests at once?**  
-A: Yes! You can run an entire collection or all collections at once using the play button in the collections view.
+A: Yes! Run an entire collection or group using the Collection Runner.
 
 **Q: Does it support request chaining or response variables?**  
 A: Yes! When running collection tests, use `pm.environment`. For example, set a variable with `pm.environment.set('userId', 'some_random_user_id')` in one test, then access it with `pm.environment.get('userId')` in another. Great for testing CRUD flows—just ensure requests are ordered correctly in the collection.
