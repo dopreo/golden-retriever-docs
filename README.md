@@ -39,6 +39,14 @@ https://marketplace.visualstudio.com/items?itemName=andriiklymiuk.golden-retriev
 - Run individual collections or all collections at once
 - View detailed test results and response data
 
+🏃 **Collection Runner**
+
+- Run entire collections or groups with one click
+- Real-time progress in output channel
+- Iteration support
+- Test reporting
+- Stats visualization for multiple iterations
+
 <img src="resources/demo-request.gif" width="600" alt="Golden Retriever Demo">
 
 ## Installation
@@ -173,8 +181,8 @@ A: Environment variables are stored in your local `.env` file, which should be a
 **Q: Can I run multiple requests at once?**  
 A: Yes! You can run an entire collection or all collections at once using the play button in the collections view.
 
-**Q: Does it support request chaining or variables from responses?**  
-A: Currently, this feature is not supported. However, you can use environment variables and test scripts to achieve similar functionality.
+**Q: Does it support request chaining or response variables?**  
+A: Yes! When running collection tests, use `pm.environment`. For example, set a variable with `pm.environment.set('userId', 'some_random_user_id')` in one test, then access it with `pm.environment.get('userId')` in another. Great for testing CRUD flows—just ensure requests are ordered correctly in the collection.
 
 **Q: How do I change the collections folder location?**  
 A: You can configure the collections path in VSCode settings:
