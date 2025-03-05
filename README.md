@@ -41,7 +41,6 @@ https://marketplace.visualstudio.com/items?itemName=andriiklymiuk.golden-retriev
 
 🏃 **Collection Runner**
 
-- Run entire collections or groups with one click
 - Real-time progress in output channel
 - Iteration support
 - Test reporting
