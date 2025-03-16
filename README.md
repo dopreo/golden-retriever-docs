@@ -23,6 +23,7 @@ https://marketplace.visualstudio.com/items?itemName=andriiklymiuk.golden-retriev
 - Support for all HTTP methods (GET, POST, PUT, PATCH, DELETE)
 - Folder organization for better request management
 - Environment variable support through `.env` files
+- Local request history for easier request management
 
 ✨ **Rich Request Features**
 
