@@ -37,6 +37,7 @@ https://marketplace.visualstudio.com/items?itemName=andriiklymiuk.golden-retriev
 🧪 **Testing & Validation**
 
 - Write and run tests for your API requests
+- Modify request data (URL, headers, body, etc.) before sending in test pre request
 - Run individual collections or all collections at once
 - View detailed test results and response data
 
@@ -140,6 +141,31 @@ Golden Retriever supports environment variables through `.env` files:
    {{BASE_URL}}/graphql
    ```
 
+## Working with Local-Only Collections
+
+If you want to create collections that remain only on your local machine and aren't committed to your repository:
+
+1. Create a `.tmp` folder inside your `collections` directory:
+
+   ```bash
+   mkdir -p collections/.tmp
+   ```
+
+2. Add this folder to your `.gitignore`:
+
+   ```
+   # Add to .gitignore
+   collections/.tmp/
+   ```
+
+3. Use this folder for:
+   - Quick test requests with hardcoded API keys
+   - User-specific test collections
+   - Experimental API exploration you don't want to share
+   - Local development requests that shouldn't be pushed to the repository
+
+The `.tmp` folder will appear in your collections sidebar locally, but won't be included in your Git history or pushed to remote repositories.
+
 ## Collection Structure
 
 Collections are stored as JSON files in your `collections` folder:
@@ -148,11 +174,20 @@ Collections are stored as JSON files in your `collections` folder:
 📁 your-project
  ┣ 📁 collections
  ┃ ┣ 📄 users-api.json
- ┃ ┗ 📄 products-api.json
+ ┃ ┣ 📄 products-api.json
  ┃ ┣ 📄 rest-api.json
- ┃ ┗ 📄 graphql-api.json
+ ┃ ┣ 📄 graphql-api.json
+ ┃ ┗ 📁 .tmp
+ ┃   ┣ 📄 local-test.json
+ ┃   ┗ 📄 dev-experiments.json
  ┗ 📄 .env
 ```
+
+## Using the Collection Runner
+
+- Right-click a collection or group in the sidebar
+- Select "Run Collection"
+- View progress in the output channel and stats in the results panel
 
 ## Example
 
@@ -191,6 +226,9 @@ A: You can configure the collections path in VSCode settings:
 2. Search for "Golden Retriever"
 3. Update the "Collections Path" setting
 
+**Q: My request/collection is not updated, after extension update, why?**  
+A: After each vscode golder retriever extension update you need to kinda close tab with opened request/collection and open again to see new changes. No need to close window, also tab reopening will suffice.
+
 ## Contributing
 
 Found a bug or have a feature request? Please open an issue on our GitHub repository.
@@ -200,5 +238,7 @@ Found a bug or have a feature request? Please open an issue on our GitHub reposi
 This extension is released under the MIT License.
 
 ---
+
+Great thanks to postman team introducing newman, it is used for tests compatibility.
 
 <a href="https://www.flaticon.com/free-icons/golden-retriever" title="golden retriever icons">Golden retriever icons created by Maxim Kulikov - Flaticon</a>
