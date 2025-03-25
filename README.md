@@ -1,6 +1,9 @@
 # Golden Retriever
 
-<img src="resources/icon.png" width="128" height="128" alt="Golden Retriever">
+<div style="display: flex; align-items: center; gap: 10px;">
+   <img src="resources/icon.png" width="128" height="128" alt="Golden Retriever">
+   <a href="https://www.producthunt.com/posts/golden-retriever?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-golden&#0045;retriever" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=946017&theme=dark&t=1742928095595" alt="Golden&#0032;Retriever - API&#0032;testing&#0032;in&#0032;VS&#0032;Code&#0058;&#0032;Git&#0032;sync&#0044;&#0032;local&#0044;&#0032;free | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</div>
 
 A Visual Studio Code extension that brings API collection management right into your editor. Think Postman, but with Git sync and workspace integration.
 
