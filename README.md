@@ -243,5 +243,3 @@ This extension is released under the MIT License.
 ---
 
 Great thanks to postman team introducing newman, it is used for tests compatibility.
-
-<a href="https://www.flaticon.com/free-icons/golden-retriever" title="golden retriever icons">Golden retriever icons created by Maxim Kulikov - Flaticon</a>
