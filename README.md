@@ -243,3 +243,6 @@ This extension is released under the MIT License.
 ---
 
 Great thanks to postman team introducing newman, it is used for tests compatibility.
+
+Golden Retriever's new icon was provisioned by [oreohive.org](https://github.com/oreohive).
+This icon is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0), but its use must follow their Terms.
